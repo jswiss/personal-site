@@ -1,5 +1,6 @@
 <script>
-	import successkid from 'images/successkid.jpg';
+  import successkid from 'images/successkid.jpg';
+  import {posts} from '../posts'
 </script>
 
 <style>
@@ -46,5 +47,13 @@
 	<img alt="Success Kid" src="{successkid}">
 	<figcaption>Have fun with Sapper!</figcaption>
 </figure>
+
+{#each posts as post}
+  <article>
+    <h2>{post.title}</h2>
+    <p>{post.date}</p>
+    <p>{post}</p>
+  </article>
+{/each}
 
 <p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
