@@ -9,7 +9,7 @@
 </script>
 
 <script lang="ts">
-  import { posts } from "./_posts";
+  import { posts } from './_posts';
   console.log(posts);
 </script>
 

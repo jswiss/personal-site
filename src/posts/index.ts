@@ -1,5 +1,5 @@
 //@ts-ignore
-import allPosts from './*.md'
+import allPosts from './*.md';
 
 interface Metadata {
   layout: string;
@@ -7,7 +7,6 @@ interface Metadata {
   summary?: string;
   date: string;
   tags: string;
-
 }
 interface Post {
   html: string;
@@ -16,11 +15,12 @@ interface Post {
   date?: number;
 }
 
-export const posts = allPosts.map(transformPost)
+export const posts = allPosts
+  .map(transformPost)
   .sort((a: Post, b: Post) => b.date - a.date);
 
-function transformPost({html, metadata, filename}: Post) {
+function transformPost({ html, metadata, filename }: Post) {
   const slug = filename.replace(/.md$/, '');
   const date = new Date(metadata.date);
-  return {...metadata, html, slug, filename, date};
+  return { ...metadata, html, slug, filename, date };
 }

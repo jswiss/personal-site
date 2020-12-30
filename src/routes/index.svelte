@@ -1,6 +1,6 @@
 <script>
-  import successkid from "images/successkid.jpg";
-  import { posts } from "../posts";
+  import successkid from 'images/successkid.jpg';
+  import { posts } from '../posts';
 </script>
 
 <style>

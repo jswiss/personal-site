@@ -1,5 +1,5 @@
 //@ts-ignore
-import all from './posts/*.md'
+import all from './posts/*.md';
 
 export const posts = all;
 
