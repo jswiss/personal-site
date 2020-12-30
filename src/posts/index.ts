@@ -1,19 +1,7 @@
 //@ts-ignore
 import allPosts from './*.md';
+import type { Post } from './post.types'
 
-interface Metadata {
-  layout: string;
-  title: string;
-  summary?: string;
-  date: string;
-  tags: string;
-}
-interface Post {
-  html: string;
-  metadata: Metadata;
-  filename: string;
-  date?: number;
-}
 
 export const posts = allPosts
   .map(transformPost)

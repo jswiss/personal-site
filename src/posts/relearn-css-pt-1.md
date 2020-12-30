@@ -6,20 +6,7 @@ tags: "tutorial, learning, how to, how-to, css, html, web dev, web
   development, css-grid, grid, flexbox, layout, columns "
 ---
 
-<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
-
-<script>
-    window.klipse_settings = {
-        selector_eval_js: '.language-klipse-eval-js', // css selector for the html elements you want to klipsify
-    };
-</script>
-
 _TL;DR - CSS Grid and Flexbox are great. I use Grid for layouts and two-dimensional renderings, and Flexbox for one-dimensional renderings and components._
-
-```eval-js
-var x = 1;
-x + Math.random();
-```
 
 CSS is tough. When I started professionally developing websites about five years ago, there was zero incentive to develop CSS knowledge; even basic layouts seemed hacky, with prolific use of `float: right;` this and `margin: 0 auto;` that. It didn't intrinsically make sense and only added to the mystique and inapproachability that was CSS at the time.
 
@@ -107,5 +94,3 @@ So, if you still need Flexbox to use Bootstrap, why do you need to use Bootstrap
 In the end, I prefer Grid for layouts or anything two-dimensional, and Flexbox for one-dimensional renderings (like the icons in the bottom of my site!) or for components. Of course, that's personal preference; yours may differ, and mine may change over time!
 
 For me, it is definitely time to rid myself of unnecessary frameworks, wipe the slate clean, and embrace CSS!
-
-<script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>

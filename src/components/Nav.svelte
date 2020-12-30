@@ -1,14 +1,13 @@
-<script lang="ts">
-  export let segment: string;
+<script>
+  export let segment;
+  import Avatar from "./Avatar.svelte";
 </script>
 
 <style>
   nav {
-    border-bottom: 1px solid rgba(255, 62, 0, 0.1);
     font-weight: 300;
-    padding: 0 1em;
+    padding-left: 1rem;
   }
-
   ul {
     margin: 0;
     padding: 0;
@@ -16,7 +15,7 @@
 
   /* clearfix */
   ul::after {
-    content: '';
+    content: "";
     display: block;
     clear: both;
   }
@@ -33,32 +32,37 @@
 
   [aria-current]::after {
     position: absolute;
-    content: '';
+    content: "";
     width: calc(100% - 1em);
     height: 2px;
-    background-color: rgb(255, 62, 0);
+    background-color: #7e30a8;
     display: block;
     bottom: -1px;
   }
 
   a {
     text-decoration: none;
-    padding: 1em 0.5em;
+    padding: 0.5em 0.5em;
     display: block;
+    font-size: 1.2em;
+  }
+
+  .right {
+    float: right;
   }
 </style>
 
 <nav>
   <ul>
     <li>
-      <a
-        aria-current={segment === undefined ? 'page' : undefined}
-        href=".">home</a>
+      <a aria-current={segment === undefined ? 'page' : undefined} href=".">
+        home
+      </a>
     </li>
     <li>
-      <a
-        aria-current={segment === 'about' ? 'page' : undefined}
-        href="about">about</a>
+      <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
+        about
+      </a>
     </li>
 
     <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
@@ -67,7 +71,22 @@
       <a
         rel="prefetch"
         aria-current={segment === 'blog' ? 'page' : undefined}
-        href="blog">blog</a>
+        href="blog">
+        blog
+      </a>
+    </li>
+    <li>
+      <a
+        rel="prefetch"
+        aria-current={segment === 'has-function' ? 'page' : undefined}
+        href="i-can-haz-functional">
+        i can haz functional?
+      </a>
+    </li>
+    <li class="right">
+      <a href=".">
+        <Avatar />
+      </a>
     </li>
   </ul>
 </nav>

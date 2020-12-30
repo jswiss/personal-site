@@ -1,64 +1,55 @@
 <script>
-  import successkid from 'images/successkid.jpg';
-  import { posts } from '../posts';
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  });
 </script>
 
 <style>
-  h1,
-  figure,
-  p {
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  h1 {
-    font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0 0 0.5em 0;
-  }
-
-  figure {
-    margin: 0 0 1em 0;
-  }
-
-  img {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 0 1em 0;
+  section {
+    margin-bottom: 1rem;
   }
 
   p {
     margin: 1em auto;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
-    }
+    font-size: 1.3em;
+    text-align: left;
   }
 </style>
 
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>Joshua Swiss's Site</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js">
+
+  </script>
 </svelte:head>
 
-<h1>Great success!</h1>
-
-<figure>
-  <img alt="Success Kid" src={successkid} />
-  <figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-{#each posts as post}
-  <article>
-    <h2>{post.title}</h2>
-    <p>{post.date}</p>
-    <p>{post}</p>
-  </article>
-{/each}
-
-<p>
-  <strong>Try editing this file (src/routes/index.svelte) to test live
-    reloading.</strong>
-</p>
+<main id="main">
+  <section>
+    <p>
+      Hey there! I'm Josh, a software engineer based in Glasgow. This is my site
+      to showcase my professional skillz &trade; and blather about whatever I
+      find interesting, whether that be code or anything else.
+    </p>
+  </section>
+  <section>
+    <p>
+      If you want to learn more about my work and expertise, please check out
+      the
+      <a href="about">About</a>
+      page. If you want to read about whatever; JavaScript, Rust, fermentation,
+      running, life, etc., please check out my
+      <a href="blog">Blog</a>
+      .
+    </p>
+  </section>
+</main>
