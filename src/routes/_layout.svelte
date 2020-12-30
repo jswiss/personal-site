@@ -1,22 +1,44 @@
-<script lang="ts">
+<script>
   import Nav from "../components/Nav.svelte";
+  import Footer from "../components/Footer.svelte";
 
-  export let segment: string;
+  export let segment;
 </script>
 
 <style>
+  @font-face {
+    font-family: "Swansea";
+    src: url("/fonts/Swansea-q3pd.ttf");
+  }
+  @font-face {
+    font-family: "Gilroy";
+    src: url("/fonts/gilroy-extrabold.otf");
+  }
+  h1 {
+    display: inline;
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Gilroy";
+  }
+
   main {
-    position: relative;
-    max-width: 56em;
-    background-color: white;
-    padding: 2em;
-    margin: 0 auto;
-    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+  #main-border {
+    color: whitesmoke;
+    font-family: "Swansea";
   }
 </style>
 
 <Nav {segment} />
 
 <main>
-  <slot />
+  <h1>Joshua Swiss</h1>
+  <div id="main-border">
+    <slot />
+  </div>
 </main>
+
+<Footer />
