@@ -45,6 +45,7 @@
     padding: 0.5em 0.5em;
     display: block;
     font-size: 1.2em;
+    color: #e5e5d8;
   }
 
   .right {
@@ -73,14 +74,6 @@
         aria-current={segment === 'blog' ? 'page' : undefined}
         href="blog">
         blog
-      </a>
-    </li>
-    <li>
-      <a
-        rel="prefetch"
-        aria-current={segment === 'has-function' ? 'page' : undefined}
-        href="i-can-haz-functional">
-        i can haz functional?
       </a>
     </li>
     <li class="right">

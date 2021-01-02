@@ -26,20 +26,20 @@
   .blog-card {
     display: flex;
     flex-direction: column;
-    margin: 0.5rem;
+    margin: 0.8rem;
     border: 1px solid #7e30a8;
     border-radius: 1%;
   }
   .title {
     margin: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .card-footer {
     background-color: #7e30a8;
   }
   .post-date {
     margin: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-style: italic;
     color: whitesmoke;
   }

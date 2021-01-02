@@ -6,11 +6,13 @@
 :root {
   --pantone-blue: #1b4c80;
   --bg-green: #5aa830;
+  --bg-grey: #403c3c;
+  --text-white: #fffff0;
 }
 
 html,
 body {
-  background-color: var(--bg-green);
+  background-color: var(--bg-grey);
 }
 
 body {

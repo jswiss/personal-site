@@ -19,8 +19,8 @@
   export function preload<T>(): Promise<T> {
     return this.fetch(`blog.json`)
       .then((r: { json: () => any }) => r.json())
-      .then((blogposts: Post[]) => {
-        return { blogposts };
+      .then((posts: Post[]) => {
+        return { posts };
       });
   }
 </script>

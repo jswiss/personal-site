@@ -47,6 +47,10 @@
     max-width: 100%;
     height: auto;
   }
+
+  code > p {
+    color: black;
+  }
 </style>
 
 <svelte:head>

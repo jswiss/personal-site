@@ -19,6 +19,7 @@
     text-align: center;
     font-size: 4rem;
     font-family: "Gilroy";
+    color: #e5e5d8;
   }
 
   main {
@@ -27,7 +28,7 @@
   }
 
   #main-border {
-    color: whitesmoke;
+    color: #e5e5d8;
     font-family: "Swansea";
   }
 </style>
