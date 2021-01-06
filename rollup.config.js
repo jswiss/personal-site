@@ -37,7 +37,7 @@ export default {
       svelte({
         preprocess: sveltePreprocess(),
         compilerOptions: {
-          dev,
+          dev: true,
           hydratable: true,
         },
       }),
@@ -119,7 +119,7 @@ export default {
       glob(),
     ],
     external: Object.keys(pkg.dependencies).concat(
-      require('module').builtinModules
+      require('module').builtinModules,
     ),
 
     preserveEntrySignatures: 'strict',
