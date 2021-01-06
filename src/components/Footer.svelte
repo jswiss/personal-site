@@ -6,7 +6,7 @@
 
   /* clearfix */
   ul::after {
-    content: "";
+    content: '';
     display: flex;
     flex-direction: row;
     clear: both;
@@ -23,75 +23,56 @@
     display: block;
   }
 
-  .twitter {
+  #twitter {
     width: 32px;
     height: 32px;
-    background-color: #f5f5f5;
     -webkit-mask: url(/icons/twitter-icon.svg) no-repeat center;
     mask: url(/icons/twitter-icon.svg) no-repeat center;
   }
-  .github {
+  #github {
     width: 32px;
     height: 32px;
-    background-color: #f5f5f5;
     -webkit-mask: url(/icons/github-icon.svg) no-repeat center;
     mask: url(/icons/github-icon.svg) no-repeat center;
   }
-  .linkedin {
+  #linkedin {
     width: 32px;
     height: 32px;
-    background-color: #f5f5f5;
     -webkit-mask: url(/icons/linkedin-icon.svg) no-repeat center;
     mask: url(/icons/linkedin-icon.svg) no-repeat center;
   }
-  .email {
+  #email {
     width: 32px;
     height: 32px;
-    background-color: #f5f5f5;
     -webkit-mask: url(/icons/email-icon.svg) no-repeat center;
     mask: url(/icons/email-icon.svg) no-repeat center;
   }
 </style>
 
 <footer>
-  <div id="footer-left" />
   <ul>
     <li>
       <a href="mailto:josh@joshuaswiss.dev">
-        <div class="email" alt="send me an email!" title="send me an email!" />
+        <div class="footer-icon" id="email" alt="send me an email!" title="send me an email!" />
       </a>
     </li>
     <li>
-      <a
-        href="https://www.linkedin.com/in/joshuaswiss/"
-        target="_blank"
-        rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/in/joshuaswiss/" target="_blank" rel="noopener noreferrer">
         <div
-          class="linkedin"
+          class="footer-icon"
+          id="linkedin"
           alt="explore my professional experience!"
           title="explore my professional experience!" />
       </a>
     </li>
     <li>
-      <a
-        href="https://twitter.com/jswiiiss"
-        target="_blank"
-        rel="noopener noreferrer">
-        <div
-          class="twitter"
-          alt="see what I tweet!"
-          title="see what I tweet!" />
+      <a href="https://twitter.com/jswiiiss" target="_blank" rel="noopener noreferrer">
+        <div class="footer-icon" id="twitter" alt="see what I tweet!" title="see what I tweet!" />
       </a>
     </li>
     <li>
-      <a
-        href="https://github.com/jswiss"
-        target="_blank"
-        rel="noopener noreferrer">
-        <div
-          class="github"
-          alt="check out my repos!"
-          title="check out my repos!" />
+      <a href="https://github.com/jswiss" target="_blank" rel="noopener noreferrer">
+        <div class="footer-icon" id="github" alt="check out my repos!" title="check out my repos!" />
       </a>
     </li>
   </ul>
