@@ -1,25 +1,25 @@
 <script>
-  import Nav from "../components/Nav.svelte";
-  import Footer from "../components/Footer.svelte";
+  import { darkMode } from '../stores/stores';
+  import Nav from '../components/Nav.svelte';
+  import Footer from '../components/Footer.svelte';
 
   export let segment;
 </script>
 
 <style>
   @font-face {
-    font-family: "Swansea";
-    src: url("/fonts/Swansea-q3pd.ttf");
+    font-family: 'Swansea';
+    src: url('/fonts/Swansea-q3pd.ttf');
   }
   @font-face {
-    font-family: "Gilroy";
-    src: url("/fonts/gilroy-extrabold.otf");
+    font-family: 'Gilroy';
+    src: url('/fonts/gilroy-extrabold.otf');
   }
   h1 {
     display: inline;
     text-align: center;
     font-size: 4rem;
-    font-family: "Gilroy";
-    color: #e5e5d8;
+    font-family: 'Gilroy';
   }
 
   main {
@@ -28,15 +28,22 @@
   }
 
   #main-border {
-    color: #e5e5d8;
-    font-family: "Swansea";
+    font-family: 'Swansea';
   }
 </style>
+
+<svelte:head>
+  {#if $darkMode === 'light'}
+    <link rel="stylesheet" href="styles/light-mode.css" />
+  {:else if $darkMode === 'dark'}
+    <link rel="stylesheet" href="styles/dark-mode.css" />
+  {/if}
+</svelte:head>
 
 <Nav {segment} />
 
 <main>
-  <h1>Joshua Swiss</h1>
+  <h1 class="dark">Joshua Swiss</h1>
   <div id="main-border">
     <slot />
   </div>
