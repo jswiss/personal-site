@@ -1,0 +1,13 @@
+name: Automated browser tests
+on: push
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Install deps
+        run: npm install
+      - name: Build it
+        run: npm run build
+      - name: Run tests
+        run: npm test
