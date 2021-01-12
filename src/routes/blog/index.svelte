@@ -1,7 +1,8 @@
-<script context="module" lang=typescript>
+<script context="module" lang="ts">
   //@ts-ignore
   import BlogCard from "../../components/BlogCard.svelte";
   import { posts } from './_posts';
+
   interface Metadata {
     layout: string;
     title: string;
