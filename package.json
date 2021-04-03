@@ -1,5 +1,5 @@
 {
-  "name": "Joshua Swiss's Site",
+  "name": "joshuaswissblog",
   "description": "An excuse to play around with Svelte, Sapper, SvelteKit, and a dumping ground for my thoughts and experimentations",
   "version": "0.0.1",
   "scripts": {
