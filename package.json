@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "Joshua Swiss's Site",
+  "description": "An excuse to play around with Svelte, Sapper, SvelteKit, and a dumping ground for my thoughts and experimentations",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",

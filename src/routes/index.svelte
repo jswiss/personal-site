@@ -20,15 +20,18 @@
 <main id="main">
   <section>
     <p>
-      Hey there! I'm Josh, a software engineer based in Glasgow. This is my site to showcase my professional skillz
-      &trade; and blather about whatever I find interesting, whether that be code or anything else.
+      Hey there! I'm Josh, a software engineer based in Glasgow. This is my site
+      to talk tech and engineering and blather about whatever else I find
+      interesting, whether that be code or anything else.
     </p>
   </section>
   <section>
     <p>
-      If you want to learn more about my work and expertise, please check out the
+      If you want to learn more about my work and expertise, please check out
+      the
       <a href="about">About</a>
-      page. If you want to read about whatever; JavaScript, Rust, fermentation, running, life, etc., please check out my
+      page. If you want to read about whatever; JavaScript, Rust, fermentation,
+      running, life, etc., please check out my
       <a href="blog">Blog</a>
       .
     </p>
